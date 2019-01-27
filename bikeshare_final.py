@@ -6,7 +6,7 @@ import numpy as np
 
 https://stackoverflow.com/questions/39291499/how-to-concatenate-multiple-column-values-into-a-single-column-in-panda-datafram
 
-https://stackoverflow.com/questions/4048651/python-function-to-convert-seconds-into-minutes-hours-and-days/4048773 """  
+https://stackoverflow.com/questions/4048651/python-function-to-convert-seconds-into-minutes-hours-and-days/4048773 """
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -33,7 +33,7 @@ def get_filters():
 
     while True:
         try:
-            city = (input('What city do you want to look at? You can choose between New York City, Chicago or Washington.\n')).lower()
+            city = (input('Do you want to look at data from New York City, Chicago or Washington.\n')).lower()
             if city in CITIES:
                 break
         finally:
@@ -206,7 +206,7 @@ def user_stats(df,city):
     print("Birth Year data:")
 
     if 'Birth Year' in df.columns:
-        
+
         max_birth_year = int(df['Birth Year'].max())
         print("Most Recent Birth Year is {}".format(max_birth_year))
 
@@ -215,7 +215,7 @@ def user_stats(df,city):
 
         frequent_birth_year = int(df['Birth Year'].mode()[0])
         print("Most Frequent Birth Year is {}".format(frequent_birth_year))
-   
+
     else:
         print("Unfortunately this data is not available for {}.".format(city))
 
@@ -234,22 +234,22 @@ def main():
         user_stats(df,city)
 
         i = 0
-        
+
         while True:
 
             display_data = input("Enter 'yes' to see five (more) rows of raw data. Enter 'no' to continue.\n").lower()
-                
-            try:  
+
+            try:
                 if display_data == 'yes':
                     print(df[i:i+5])
                     i += 5
-                
+
                 if display_data == 'no':
                     break
-                    
+
             finally:
                 print("")
-                
+
         restart = input("Enter 'yes' to explore different data. Enter anything else to quit.\n")
         if restart.lower() != 'yes':
             break
