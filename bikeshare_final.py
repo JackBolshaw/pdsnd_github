@@ -233,7 +233,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df,city)
 
-        i = 0
+        i_row = 0
 
         while True:
 
@@ -241,8 +241,8 @@ def main():
 
             try:
                 if display_data == 'yes':
-                    print(df[i:i+5])
-                    i += 5
+                    print(df[i_row:i_row+5])
+                    i_row += 5
 
                 if display_data == 'no':
                     break
