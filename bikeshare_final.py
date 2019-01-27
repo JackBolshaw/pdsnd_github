@@ -2,12 +2,6 @@ import time
 import pandas as pd
 import numpy as np
 
-""" Helpful articles
-
-https://stackoverflow.com/questions/39291499/how-to-concatenate-multiple-column-values-into-a-single-column-in-panda-datafram
-
-https://stackoverflow.com/questions/4048651/python-function-to-convert-seconds-into-minutes-hours-and-days/4048773 """
-
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -20,12 +14,13 @@ DAYS = {'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sun
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
+    Asks user to specify a city, month, and day to analyse.
 
     Returns:
-        (str) city - name of the city to analyze
+        (str) city - name of the city to analyse
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
+
 
     """
 
@@ -75,7 +70,7 @@ def load_data(city, month, day):
     Loads data for the specified city and filters by month and day if applicable.
 
     Args:
-        (str) city - name of the city to analyze
+        (str) city - name of the city to analyse
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     Returns:
@@ -241,6 +236,7 @@ def main():
 
             try:
                 if display_data == 'yes':
+
                     print(df[i_row:i_row+5])
                     i_row += 5
 
@@ -257,4 +253,11 @@ def main():
     print("Thank you and have a nice day :)")
 
 if __name__ == "__main__":
+
 	main()
+
+""" Helpful articles
+
+https://stackoverflow.com/questions/39291499/how-to-concatenate-multiple-column-values-into-a-single-column-in-panda-datafram
+
+https://stackoverflow.com/questions/4048651/python-function-to-convert-seconds-into-minutes-hours-and-days/4048773 """
