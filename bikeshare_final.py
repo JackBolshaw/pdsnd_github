@@ -2,12 +2,6 @@ import time
 import pandas as pd
 import numpy as np
 
-""" Helpful articles
-
-https://stackoverflow.com/questions/39291499/how-to-concatenate-multiple-column-values-into-a-single-column-in-panda-datafram
-
-https://stackoverflow.com/questions/4048651/python-function-to-convert-seconds-into-minutes-hours-and-days/4048773 """
-
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -259,3 +253,9 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
+""" Helpful articles
+
+https://stackoverflow.com/questions/39291499/how-to-concatenate-multiple-column-values-into-a-single-column-in-panda-datafram
+
+https://stackoverflow.com/questions/4048651/python-function-to-convert-seconds-into-minutes-hours-and-days/4048773 """
