@@ -11,10 +11,14 @@ Using NumPy and Pandas as imported libraries, the python code uses a series of l
 
 The python code then uses multiple dataframes to analyse key variables providing insights into the bike share data.
 
-Once the data has been displayed the code then prompts the user whether they would like to see 5 lines of raw data and then asks the user whether they would like to view different filters. 
+Once the data has been displayed the code then prompts the user whether they would like to see 5 lines of raw data and then asks the user whether they would like to view different filters.
 
 ### Files used
-Include the files used
+The files used during the project were:
+
+chicago.csv
+new_york_city.csv
+washington-csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
